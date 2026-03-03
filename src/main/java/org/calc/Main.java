@@ -4,10 +4,7 @@ package org.calc;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 public class Main {
-
     //Lista onde vai guardar a expressão do usuario
     static ArrayList<String> exp = new ArrayList<>();
 
@@ -25,9 +22,9 @@ public class Main {
     }
 
     public static double result() {
-
+        //Enquanto tiver valores na lista irá executar a função novamente
         while (exp.size() > 1) {
-
+            //Variaveis
             double num1 = Double.parseDouble(exp.get(0)); //Primeiro numero
             String op = exp.get(1); //Operador
             double num2 = Double.parseDouble(exp.get(2)); //Segundo numero
@@ -40,24 +37,24 @@ public class Main {
             //Adiciona resultado para o inicio da lista
             exp.add(0, String.valueOf(res));
         }
-
-        return Double.parseDouble(exp.get(0));
+        return Double.parseDouble(exp.get(0)); //Resultado
     }
 
     public static void main(String[] args) {
-
+        //prompt
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Faça uma equação: ");
+        System.out.print("Diga uma equacao: ");
 
+        //Separa numero dos operadores
         String input = scanner.nextLine().replaceAll("\\s+", "");
-
-        // separa números e operadores
         String[] tokens = input.split("(?<=[+\\-*/])|(?=[+\\-*/])");
 
+        //Converte os valores da lista para um novo ArrayList
         for (String t : tokens) {
             exp.add(t);
         }
 
+        //debug
         try {
             System.out.println("Resultado: " + result());
         } catch (Exception e) {
