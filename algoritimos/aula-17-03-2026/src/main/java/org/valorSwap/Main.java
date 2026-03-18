@@ -1,4 +1,4 @@
-package org.trocaVal;
+package org.valorSwap;
 
 //bibliotecas
 import java.util.Scanner;

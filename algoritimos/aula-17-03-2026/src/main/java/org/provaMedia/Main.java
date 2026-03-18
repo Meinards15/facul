@@ -1,4 +1,4 @@
-package org.media;
+package org.provaMedia;
 
 //bibliotecas
 import java.util.Scanner;

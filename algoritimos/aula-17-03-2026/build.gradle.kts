@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "org.calc-app"
+group = "org.algoritimos"
 version = "1.0"
 
 repositories {

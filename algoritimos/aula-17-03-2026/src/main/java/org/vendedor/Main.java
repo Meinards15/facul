@@ -1,4 +1,4 @@
-package org.calcVend;
+package org.vendedor;
 
 //bibliotecas
 import java.util.Scanner;
